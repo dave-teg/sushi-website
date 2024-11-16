@@ -1,0 +1,270 @@
+/* hero section */
+
+.hero {
+  display: flex;
+  min-height: calc(100vh - 74px);
+}
+
+.hero__image {
+  flex: 1;
+  background-color: var(--primary-color);
+  position: relative;
+  z-index: 1;
+}
+
+.hero__image .hero-img {
+  width: 120%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__image h2 {
+  position: absolute;
+  /* top: 40%;
+  left: 3%; */
+  bottom: 0;
+  padding: 20px;
+  margin-bottom: 0;
+  font-size: 7.5rem;
+  font-weight: 800;
+  color: white;
+  line-height: 135px;
+}
+
+.hero__content {
+  flex: 1.219;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero__content-text {
+  padding: 4rem 3rem 4rem 4rem;
+  /* padding: 4rem; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero__content-text h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: none;
+  margin-bottom: 0;
+}
+
+.hero__content-text p {
+  margin: 2rem 0 0 2rem;
+  font-size: 18px;
+  line-height: 23px;
+  /* width: 45ch; */
+}
+
+.hero__content-btns {
+  /* padding-left: 3rem; */
+  margin: 40px 0 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__content-btns button {
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero__btn {
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 18px;
+  /* padding: 1.3rem 3.5rem; */
+  min-width: 212px;
+  padding: 20px;
+}
+
+.hero__btn--transparent {
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: var(--transition);
+  padding:  10px 2rem;
+}
+
+.hero__btn--transparent img {
+  width: 46px;
+  height: 46px;
+  margin-right: 12px;
+}
+
+.hero__btn--transparent:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* hero review */
+.hero__reviews {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem 4rem;
+}
+
+.hero__stats {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__stats h4 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+.hero__stats p {
+  line-height: 1.3rem;
+  color: var(--grey-400);
+  margin-bottom: 0;
+}
+
+.hero__reviews-testimonies {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 1rem;
+  border-left: 1px solid var(--grey-300);
+}
+
+.hero__reviews-testimonies img {
+  width: 40px;
+  height: 40px;
+}
+
+.testimonies__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonies__content p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 1060px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero__image {
+    width: 100%;
+  }
+
+  .hero__image .hero-img {
+    width: 100%;
+    /* transform: matrix(1, 0.05, 0, 1.25, 0, 0); */
+  }
+
+  .hero__content-text h1 {
+    text-align: center;
+  }
+
+  .hero__content-text p {
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .hero__content-btns {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hero__image h2 {
+    font-size: 70px;
+    line-height: 95px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .hero__content-text h1 {
+    font-size: 60px;
+  }
+
+  .hero__content-text p {
+    font-size: 1rem;
+  }
+
+  .hero__content-btns {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .hero__btn {
+    min-width: 140px;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .hero__btn--transparent {
+    padding: 10px 12px;
+  }
+
+  .hero__btn--transparent img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .hero__stats h4 {
+    font-size: 3rem;
+  }
+
+  .hero__stats p {
+    font-size: 15px;
+  }
+
+
+  .testimonies__content p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .hero__image h2 {
+    font-size: 50px;
+    line-height: 75px;
+  }
+
+  .hero__reviews {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero__stats {
+    margin-bottom: 1rem;
+  }
+
+  .hero__reviews-testimonies {
+    border-top: 1px solid var(--grey-300);
+    border-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .hero__image h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}

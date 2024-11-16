@@ -1,0 +1,111 @@
+/* newsletter */
+.newsletter {
+  /* background-color: var(--primary-color);
+  background-image: url("../assets/subscribe_bg.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; */
+
+  background: var(--primary-color) url("../assets/subscribe_bg.png") center/cover no-repeat;
+
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter h2 {
+  font-size: 5rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+}
+
+.newsletter p {
+  font-size: 20px;
+  color: var(--grey-50);
+  opacity: 0.7;
+  font-weight: 500;
+  word-spacing: 2px;
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.newsletter form{
+  min-width: 480px;
+  margin-top: 40px;
+
+  padding: 14px 14px 14px 24px;
+
+  display: flex;
+  gap: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 46px;
+}
+
+.newsletter form input {
+  flex: 1;
+
+  font-size:  16px;
+  font-weight: 400px;
+  font-family: var(--plus-jakarta-sans);
+
+  color: #fff;
+  opacity: 0.5;
+
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.newsletter form input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.newsletter form button {
+  padding: 20px;
+
+  min-width: 180px;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: #fff;
+  text-align: center;
+
+  background: var(--black-400);
+  border-radius: 46px;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+@media  screen and (max-width: 550px) {
+  .newsletter form {
+    width: 100%;
+    flex-direction: column;
+    min-width: unset;
+    padding: 0;
+    border: none;
+    border-radius: none;
+  }
+
+  .newsletter form input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 46px;
+    padding: 1rem;
+  }
+
+  .newsletter form button {
+    flex: 1;
+    min-width: unset;
+    padding: 1rem;
+  }
+}

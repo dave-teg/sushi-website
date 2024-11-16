@@ -1,0 +1,143 @@
+/* header */
+.header__nav {
+  display: flex;
+}
+
+.header__logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+.header__logo h4 {
+  margin-bottom: 0;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+.header__logo h4 a {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+.header__menu-mobile {
+  display: none;
+}
+
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1.236;
+  margin: 0;
+  padding: 20px;
+  gap: 4rem;
+}
+
+.header__menu li a{
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.header__menu li a:hover,
+.header__menu li a:focus {
+  color: var(--primary-color);
+}
+
+.header__menu li i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header__mobile-icon .close-icon {
+  display: none;
+}
+
+/* media queries */
+@media screen and (max-width: 900px){
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu-mobile {
+    display: block;
+    padding: 20px;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+  }
+  .header__mobile-icon i {
+    cursor: pointer;
+  }
+
+  .header__mobile-list {
+    position: absolute;
+    top: 4.3rem;
+    left: 0;
+    width: 100%;
+    box-shadow: var(--shadow-3);
+    background-color: white;
+    border-radius: var(--borderRadius);
+  }
+
+  .header__mobile-list ul {
+    margin: 0;
+  }
+
+  .header__mobile-list li{
+    display: block;
+    border-bottom: 1px solid var(--grey-300);
+    padding: 10px 0 10px 10px;
+  }
+
+  .header__mobile-list li a {
+    display: block;
+    color: var(--secondary-color);
+    transition: var(--transition);
+  }
+
+  .header__mobile-list li:active {
+    border: 2px solid var(--primary-color);
+  }
+
+  .header__mobile-list li a:hover,
+  .header__mobile-list li a:focus {
+    color: var(--primary-color);
+  }
+
+  .header__mobile-list.show-menu {
+    display: none;
+  }
+
+  .header__mobile-icon .close-icon {
+    font-size: 20px;
+  }
+
+  .header__mobile-icon {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .header__logo {
+    padding-left: 15px;
+  }
+
+  .header__logo h4 {
+    padding-left: 0;
+    font-size: 16px;
+  }
+}
